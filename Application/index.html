@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <div class="login">
+        <h1>Predict Sneaker Resale Price</h1>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <label for="Order Date">Order Date:</label>
+            <input type="date" id="Order Date" name="Order Date">
+
+            <br>
+            <br>
+
+            <label for="Brand">Brand:</label>
+            <input type="radio" name="choice" value="Yeezy"> Yeezy
+            <input type="radio" name="choice" value="Off-White"> Off-White
+
+            <br>
+            <br>
+
+            <label for="Sneaker Name">Sneaker Name:</label>
+            <select name="Sneakers" id="Sneakers">
+                <option value="adidas Yeezy Boost 350 V2 Butter">adidas Yeezy Boost 350 V2 Butter</option>
+                <option value="Adidas Yeezy Boost 350 V2 Beluga 2pt0">Adidas Yeezy Boost 350 V2 Beluga 2pt0</option>
+                <option value="Adidas Yeezy Boost 350 V2 Zebra">Adidas Yeezy Boost 350 V2 Zebra</option>
+                <option value="Adidas Yeezy Boost 350 V2 Blue Tint">Adidas Yeezy Boost 350 V2 Blue Tint</option>
+                <option value="Adidas Yeezy Boost 350 V2 Cream White">Adidas Yeezy Boost 350 V2 Cream White</option>
+                <option value="Adidas Yeezy Boost 350 V2 Sesame">Adidas Yeezy Boost 350 V2 Sesame</option>
+                <option value="adidas Yeezy Boost 350 V2 Static">adidas Yeezy Boost 350 V2 Static</option>
+                <option value="Adidas Yeezy Boost 350 V2 Semi Frozen Yellow">Adidas Yeezy Boost 350 V2 Semi Frozen
+                    Yellow</option>
+                <option value="Air Jordan 1 Retro High Off White University Blue">Air Jordan 1 Retro High Off White
+                    University Blue</option>
+                <option value="adidas Yeezy Boost 350 V2 Static Reflective">adidas Yeezy Boost 350 V2 Static Reflective
+                </option>
+                <option value="Nike Air Presto Off White Black 2018">Nike Air Presto Off White Black 2018</option>
+                <option value="Nike Air Presto Off White White 2018">Nike Air Presto Off White White 2018</option>
+                <option value="Nike Air VaporMax Off White 2018">Nike Air VaporMax Off White 2018</option>
+                <option value="Nike Blazer Mid Off White All Hallows Eve">Nike Blazer Mid Off White All Hallows Eve
+                </option>
+                <option value="Nike Blazer Mid Off White Grim Reaper">Nike Blazer Mid Off White Grim Reaper</option>
+                <option value="Nike Zoom Fly Off White Pink">Nike Zoom Fly Off White Pink</option>
+                <option value="Nike Air VaporMax Off White Black">Nike Air VaporMax Off White Black</option>
+                <option value="Nike Zoom Fly Off White Black Silver">Nike Zoom Fly Off White Black Silver</option>
+                <option value="Nike Air Force 1 Low Off White Volt">Nike Air Force 1 Low Off White Volt</option>
+                <option value="Adidas Yeezy Boost 350 V2 Core Black Red 2017">Adidas Yeezy Boost 350 V2 Core Black Red
+                    2017</option>
+                <option value="Nike Air Force 1 Low Off White Black White">Nike Air Force 1 Low Off White Black White
+                </option>
+                <option value="Air Jordan 1 Retro High Off White Chicago">Air Jordan 1 Retro High Off White Chicago
+                </option>
+                <option value="Nike Air Max 90 Off White Black">Nike Air Max 90 Off White Black</option>
+                <option value="Nike Zoom Fly Mercurial Off White Total Orange">Nike Zoom Fly Mercurial Off White Total
+                    Orange</option>
+                <option value="Nike Air Max 90 Off White Desert Ore">Nike Air Max 90 Off White Desert Ore</option>
+                <option value="Nike Zoom Fly Mercurial Off White Black">Nike Zoom Fly Mercurial Off White Black</option>
+                <option value="Nike Air Max 90 Off White">Nike Air Max 90 Off White</option>
+                <option value="Adidas Yeezy Boost 350 V2 Core Black White">Adidas Yeezy Boost 350 V2 Core Black White
+                </option>
+                <option value="Nike Air Presto Off White">Nike Air Presto Off White</option>
+                <option value="Nike Air Max 97 Off White">Nike Air Max 97 Off White</option>
+                <option value="Nike Air VaporMax Off White">Nike Air VaporMax Off White</option>
+                <option value="Nike Blazer Mid Off White">Nike Blazer Mid Off White</option>
+                <option value="Adidas Yeezy Boost 350 Low V2 Beluga">Adidas Yeezy Boost 350 Low V2 Beluga</option>
+
+            </select>
+
+            <br>
+            <br>
+
+            <label for="Retail Price ($)">Retail Price ($):</label>
+            <input type="text" name="Retail Price" placeholder="Retail Price" required="required" />
+
+            <br>
+            <br>
+
+            <label for="Release Date">Release Date:</label>
+            <input type="date" id="Release Date" name="Release Date">
+
+            <br>
+            <br>
+
+            <label for="Shoe Size">Shoe Size:</label>
+            <select name="Shoe Size" id="Shoe Size">
+                <option value="3.5">3.5</option>
+                <option value="4.0">4.0</option>
+                <option value="4.5">4.5</option>
+                <option value="5.0">5.0</option>
+                <option value="5.5">5.5</option>
+                <option value="6.0">6.0</option>
+                <option value="6.5">6.5</option>
+                <option value="7.0">7.0</option>
+                <option value="7.5">7.5</option>
+                <option value="8.0">8.0</option>
+                <option value="8.5">8.5</option>
+                <option value="9.0">9.0</option>
+                <option value="9.5">9.5</option>
+                <option value="10.0">10.0</option>
+                <option value="10.5">10.5</option>
+                <option value="11.0">11.0</option>
+                <option value="11.5">11.5</option>
+                <option value="12.0">12.0</option>
+                <option value="12.5">12.5</option>
+                <option value="13.0">13.0</option>
+                <option value="13.5">13.5</option>
+                <option value="14.0">14.0</option>
+                <option value="14.5">14.5</option>
+                <option value="15.0">15.0</option>
+                <option value="16.0">16.0</option>
+                <option value="17.0">17.0</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="Buyer Region">Buyer Region:</label>
+            <input type="text" name="Buyer Region" placeholder="US State" required="required" />
+
+
+            <br><br><br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+
+        <br>
+        <br>
+
+        <script>
+            { { prediction_text } }
+        </script>
+
+    </div>
+
+
+</body>
+
+</html>
