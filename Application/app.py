@@ -1,51 +1,28 @@
 import numpy as np
 import pandas as pd
-from flask import Flask, request, jsonify, render_template
-import pickle
-
-
-app = Flask(
-    __name__,
-    template_folder={
-        "/Users/logno/Documents/Home/BAF1/ds_shoe_proj/Application/templates"
-    },
+from flask import (
+    Flask,
+    request,
+    jsonify,
+    render_template,
+    redirect,
+    render_template_string,
 )
+import pickle
+import cgi
+import jinja2
+import os
+
+
+app = Flask("Sneaker Price Predictor", template_folder={"templates"})
 model = pickle.load(open("/Users/logno/Documents/Home/BAF1/model.pkl", "rb"))
 
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def home():
+    # Main page. The line below throws an error and idk why
     return render_template("index.html")
-
-
-@app.route("/predict", methods=["POST"])
-def predict():
-    """
-    For rendering results on HTML GUI
-    """
-    int_features = [x for x in request.form.values()]
-    final_features = [np.array(int_features)]
-    prediction = model.predict(final_features)
-
-    output = round(prediction[0], 2)
-
-    return render_template(
-        "index.html", prediction_text="The sale price is $ {}".format(output),
-    )
-
-
-@app.route("/predict_api", methods=["POST"])
-def predict_api():
-    """
-    For direct API calls trought request
-    """
-    data = request.get_json(force=True)
-    prediction = model.predict([np.array(list(data.values()))])
-
-    output = prediction[0]
-    return jsonify(output)
 
 
 if __name__ == "__main__":
     app.run(debug=True)
-
