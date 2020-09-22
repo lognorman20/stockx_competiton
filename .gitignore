@@ -1,3 +1,4 @@
 
 *.pkl
 model.pkl
+.DS_Store

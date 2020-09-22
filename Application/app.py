@@ -14,13 +14,19 @@ import pickle
 
 
 app = Flask("Sneaker Price Predictor")
-model = pickle.load(open("/Users/logno/Documents/Home/BAF1/model.pkl", "rb"))
+# HACK - commenting out model load since it's not available on github right now
+# model = pickle.load(open("/Users/logno/Documents/Home/BAF1/model.pkl", "rb"))
 
 
 @app.route("/")
 def home():
     # Main page. The line below throws an error and idk why
     return render_template("index.html")
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    # TODO - call model's predict function and return its results/use them to populate template
+    return 'some prediction'
 
 
 if __name__ == "__main__":
