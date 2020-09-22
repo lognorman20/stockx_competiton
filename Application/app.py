@@ -10,6 +10,8 @@ from flask import (
     url_for,
 )
 
+import pickle
+
 
 app = Flask("Sneaker Price Predictor")
 model = pickle.load(open("/Users/logno/Documents/Home/BAF1/model.pkl", "rb"))
