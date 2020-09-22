@@ -9,10 +9,6 @@ from flask import (
     render_template_string,
     url_for,
 )
-import pickle
-import cgi
-import jinja2
-import os
 
 
 app = Flask("Sneaker Price Predictor")
