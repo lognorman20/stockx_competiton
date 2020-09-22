@@ -23,10 +23,11 @@ def home():
     # Main page. The line below throws an error and idk why
     return render_template("index.html")
 
-@app.route('/predict', methods=['POST'])
+
+@app.route("/predict", methods=["POST"])
 def predict():
     # TODO - call model's predict function and return its results/use them to populate template
-    return 'some prediction'
+    return "some prediction"
 
 
 if __name__ == "__main__":
