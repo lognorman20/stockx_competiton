@@ -81,28 +81,24 @@ def predict():
 
     OH_cols_train = pd.DataFrame(OH_encoder.fit_transform(data[object_cols]))
 
-    # # One-hot encoding removed index; put it back
+    # One-hot encoding removed index; put it back
     OH_cols_train.index = data.index
 
-    # # Adding the column names after one hot encoding
+    # Adding the column names after one hot encoding
     OH_cols_train.columns = OH_encoder.get_feature_names(object_cols)
 
-    # # Remove categorical columns (will replace with one-hot encoding)
+    # Remove categorical columns (will replace with one-hot encoding)
     num_data = data.drop(object_cols, axis=1)
 
-    # # Add one-hot encoded columns to numerical features
+    # Add one-hot encoded columns to numerical features
     bigdata = pd.concat([num_data, OH_cols_train], axis=1)
 
-    # bruh = bigdata.columns.to_list()
-
-    # return str(len(bruh))
+    # Run predictions
     prediction = model.predict(bigdata.tail(1))
 
     output = round(prediction[0], 2)
 
-    return render_template(
-        "index.html", prediction_text="Predicted Sneaker Price is ${}".format(output)
-    )
+    return render_template("prediction.html", prediction_text="${}".format(output),)
 
 
 if __name__ == "__main__":
