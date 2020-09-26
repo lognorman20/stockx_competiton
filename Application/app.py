@@ -31,17 +31,6 @@ def predict():
     For rendering results on HTML GUI
     """
     # PREPROCESSING
-    features = [x for x in request.form.values()]
-    cols = [
-        "Order_date",
-        "Sneaker_Name",
-        "Retail_Price",
-        "Release_Date",
-        "Shoe_Size",
-        "Buyer_Region",
-    ]
-
-    input_dictionary = dict(zip(cols, features))
 
     shoe_data = pd.read_csv(
         "/Users/logno/Documents/Home/BAF1/ds_shoe_proj/data/Clean_Shoe_Data.csv",
@@ -62,6 +51,18 @@ def predict():
         }
     )
 
+    features = [x for x in request.form.values()]
+    cols = [
+        "Order_date",
+        "Brand",
+        "Sneaker_Name",
+        "Retail_Price",
+        "Release_Date",
+        "Shoe_Size",
+        "Buyer_Region",
+    ]
+
+    input_dictionary = dict(zip(cols, features))
     data = df.append(input_dictionary, ignore_index=True)
 
     # Converting dates into numericals
@@ -93,8 +94,8 @@ def predict():
     # Add one-hot encoded columns to numerical features
     bigdata = pd.concat([num_data, OH_cols_train], axis=1)
 
-    # Run predictions
-    prediction = model.predict(bigdata.tail(1))
+    # RUNNING PREDICTIONS
+    prediction = model.predict(bigdata[-1:])
 
     output = round(prediction[0], 2)
 
