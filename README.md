@@ -2,6 +2,27 @@
 
 The purpose of this project is to predict the resale price of a sneaker based on several factors like the type of sneaker and buyer region.
 
+![GitHub last commit](https://img.shields.io/github/last-commit/lognorman20/stockx_competiton)
+![GitHub issues](https://img.shields.io/github/issues-raw/lognorman20/stockx_competiton)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/lognorman20/stockx_competiton)
+![GitHub](https://img.shields.io/github/license/lognorman20/stockx_competiton)
+
+## Demo
+![Demo](https://github.com/lognorman20/stockx_competiton/visualizations/demo.gif)
+
+## Table of Contents
+- [Title](#stockx-sneaker-price-prediction-project)
+- [Demo-Preview](#demo-preview)
+- [Table of contents](#table-of-contents)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Development](#development)
+- [Contribute](#contribute)
+    - [Sponsor](#sponsor)
+    - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)
+- [License](#license)
+- [Footer](#footer)
+
 ## Getting Started
 
 ### Installation
