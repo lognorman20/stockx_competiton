@@ -18,12 +18,6 @@ While there is plenty of money to be made, it can be risky to buy a shoe due to 
 
 This tool resolves the issue of knowing which sneaker is worthwhile and when to buy it.
 
-Description of the data from StockX:
-
-"The data we’re giving you consists of a random sample of all Off-White x Nike and Yeezy 350 sales from between 9/1/2017 (the month that Off-White first debuted “The Ten” collection) and the present. There are 99,956 total sales in the data set; 27,794 Off-White sales, and 72,162 Yeezy sales. The sample consists of U.S. sales only.
-
-To create this sample, we took a random, fixed percentage of StockX sales (X%) for each colorway, on each day, since September 2017. So, for each day the Off-White Jordan 1 was on the market, we randomly selected X% of its sale from each day. (It’s not important to know what X is; all that matters is that it’s a random sample, and that the same fixed X% of sales was selected from every day, for every sneaker). Every row in the spreadsheet represents an individual StockX sale. There are no averages or order counts; this is just a random sample of daily sales data."
-
 ## Table of Contents
 - [Title](#stockx-sneaker-price-prediction-project)
 - [Demo](#demo)
@@ -39,7 +33,7 @@ To create this sample, we took a random, fixed percentage of StockX sales (X%) f
 
 ### Installation
 
-Create a blank Anaconda environment + install the requirements file.
+Clone this repo, create a blank Anaconda environment, and install the requirements file.
 ```bash
 # Creates new environment called 'stockx-env'
 conda create -n stockx-env python=3.8
@@ -56,7 +50,23 @@ Make sure to run the app from the `application/` directory.
 cd application
 python app.py
 ```
+### Understanding the Data
+
+Description of the data from StockX:
+
+"The data we’re giving you consists of a random sample of all Off-White x Nike and Yeezy 350 sales from between 9/1/2017 (the month that Off-White first debuted “The Ten” collection) and the present. There are 99,956 total sales in the data set; 27,794 Off-White sales, and 72,162 Yeezy sales. The sample consists of U.S. sales only.
+
+To create this sample, we took a random, fixed percentage of StockX sales (X%) for each colorway, on each day, since September 2017. So, for each day the Off-White Jordan 1 was on the market, we randomly selected X% of its sale from each day. (It’s not important to know what X is; all that matters is that it’s a random sample, and that the same fixed X% of sales was selected from every day, for every sneaker). Every row in the spreadsheet represents an individual StockX sale. There are no averages or order counts; this is just a random sample of daily sales data."
+
+![](Visualizations/average_daily_sale_price.jpg)
+![](Visualizations/average_price_by_buyer_region.png)
+![](Visualizations/average_sale_price_by_sneaker_name.jpg)
+![](Visualizations/general_trends.png)
+![](Visualizations/sale_pice_distribution_of_off-white_sneakers.jpg)
+![](Visualizations/sale_price_distribution_fo_yeezy_sneakers.jpg)
+![](Visualizations/sneaker_sales_by_shoe_size.jpg)
+![](Visualizations/sneaker_sales_by_sneaker_name.jpg)
+![](Visualizations/sneakers_sales_by_retail_price.jpg)
 ## Development
-## Exploratory Data Analysis
 ## License
 ## Contact
