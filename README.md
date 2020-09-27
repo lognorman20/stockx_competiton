@@ -5,7 +5,7 @@ The purpose of this project is to predict the resale price of a sneaker based on
 ![GitHub last commit](https://img.shields.io/github/last-commit/lognorman20/stockx_competiton)
 ![GitHub issues](https://img.shields.io/github/issues-raw/lognorman20/stockx_competiton)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/lognorman20/stockx_competiton)
-![GitHub](https://img.shields.io/github/license/lognorman20/stockx_competiton)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Demo
 ![](visualizations/demo.gif)
