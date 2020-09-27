@@ -69,7 +69,7 @@ To create this sample, we took a random, fixed percentage of StockX sales (X%) f
 ![](Visualizations/sneakers_sales_by_retail_price.jpg)
 ## Development
 
-## Model Building 
+## Model Building (need to finish still)
 
 I split the data into train and tests sets with a test size of 20%. 
 
