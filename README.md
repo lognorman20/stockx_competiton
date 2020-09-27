@@ -68,5 +68,29 @@ To create this sample, we took a random, fixed percentage of StockX sales (X%) f
 ![](Visualizations/sneaker_sales_by_sneaker_name.jpg)
 ![](Visualizations/sneakers_sales_by_retail_price.jpg)
 ## Development
+
+## Model Building 
+
+I split the data into train and tests sets with a test size of 20%. 
+
+I selected three models:
+* Random Forest Regressor
+* XGBoost
+* Decision Tree Regressor
+
+I chose these models because they all had enough variation in their functionality that I thought would be useful due to their evaluation methods for this classification problem. The Random Forest Classifier is, well, random. XGBoost uses a number of nifty tricks like computing second-order gradients, i.e. second partial derivatives of the loss function (similar to Newton’s method). The KNN Classifier finds the distances between a query and all the examples in the data, selecting the specified number examples (K) closest to the query, then votes for the most frequent label. And finally, the Gradient Boost Classifier uses the loss function of the base model (e.g. random forest) as a proxy for minimizing the error of the overall model. 
+
+### Model performance
+The Random Forest model far outperformed the other approaches on the test and validation sets. 
+*	**Random Forest Classifier** : 0.771
+*	**XGBoostClassifier**: 0.78
+*	**KNeighborsClassifier**: 0.77
+*	**GradientBoostingClassifier**: 0.85
+
+The GradientBoostingClassifier far outperformed the other approaches on the test and validation sets. 
+
+## Productionization 
+In this step, I pickled my model and saved it into a callable object that can be used on other datasets.
+
 ## License
 ## Contact
