@@ -8,11 +8,11 @@ The purpose of this project is to predict the resale price of a sneaker based on
 ![GitHub](https://img.shields.io/github/license/lognorman20/stockx_competiton)
 
 ## Demo
-![Demo](https://github.com/lognorman20/stockx_competiton/visualizations/demo.gif)
+![](visualizations/demo.gif)
 
 ## Table of Contents
 - [Title](#stockx-sneaker-price-prediction-project)
-- [Demo-Preview](#demo-preview)
+- [Demo](#demo)
 - [Table of contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -37,7 +37,7 @@ conda activate stockx-env
 pip install -r requirements.txt
 ```
 
-### Run the flask app
+### Usage
 
 Make sure to run the app from the `Application/` directory.
 ```bash
