@@ -2,3 +2,12 @@ flask
 Jinja2
 numpy
 pandas
+seaborn
+matplotlib.pyplot
+matplotlib.ticker
+%matplotlib inline
+datetime
+sklearn
+xgboost
+pprint
+pickle
