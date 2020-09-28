@@ -71,6 +71,7 @@ I did some exploratory data analysis and made some visuals:
 *Fig. 3: The Average Sale Price by Sneaker Name*
 ![](Visualizations/average_sale_price_by_sneaker_name.jpg)
 
+
 *Fig. 4: Coorleations between each feature*
 ![](Visualizations/general_trends.png)
 
