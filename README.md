@@ -54,7 +54,7 @@ python app.py
 ```
 ### Understanding the Data
 
-Description of the data from StockX:
+The data I used is from [StockX's data competition in 2019](https://stockx.com/news/the-2019-data-contest/). Here's a description of the data from StockX:
 
 "The data we’re giving you consists of a random sample of all Off-White x Nike and Yeezy 350 sales from between 9/1/2017 (the month that Off-White first debuted “The Ten” collection) and the present. There are 99,956 total sales in the data set; 27,794 Off-White sales, and 72,162 Yeezy sales. The sample consists of U.S. sales only.
 
@@ -137,7 +137,7 @@ After that, I struggled to summon my knowledge of HTML and CSS from my 6th grade
 
 This project can be applied in several ways.
 
-1. Helping decide when to buy a sneaker by predicting its price at any given time 📈
+1. Helping to decide when to buy a sneaker by predicting its price at any given time 📈
 2. Knowing which factors influence the sale price of each sneaker can help businesses optimize their shoe buying process to those that have the most potential 👍
 3. Sneaker businesses can see a timeline of when sneaker prices are high or low to know when to buy/sell 📆
 4. Know if your friend got ripped off for buying their shoes too early or too late! 🤣
