@@ -54,11 +54,13 @@ python app.py
 ```
 ### Understanding the Data
 
-Description of the data from StockX:
+The data I used is from [StockX's data competition in 2019](https://stockx.com/news/the-2019-data-contest/). Here's a description of the data from StockX:
 
 "The data we’re giving you consists of a random sample of all Off-White x Nike and Yeezy 350 sales from between 9/1/2017 (the month that Off-White first debuted “The Ten” collection) and the present. There are 99,956 total sales in the data set; 27,794 Off-White sales, and 72,162 Yeezy sales. The sample consists of U.S. sales only.
 
 To create this sample, we took a random, fixed percentage of StockX sales (X%) for each colorway, on each day, since September 2017. So, for each day the Off-White Jordan 1 was on the market, we randomly selected X% of its sale from each day. (It’s not important to know what X is; all that matters is that it’s a random sample, and that the same fixed X% of sales was selected from every day, for every sneaker). Every row in the spreadsheet represents an individual StockX sale. There are no averages or order counts; this is just a random sample of daily sales data."
+
+I did some exploratory data analysis and made some visuals:
 
 *Fig. 1: The Average Daily Sale Price from 2017 to 2019*
 ![](Visualizations/average_daily_sale_price.jpg)
@@ -68,6 +70,7 @@ To create this sample, we took a random, fixed percentage of StockX sales (X%) f
 
 *Fig. 3: The Average Sale Price by Sneaker Name*
 ![](Visualizations/average_sale_price_by_sneaker_name.jpg)
+
 
 *Fig. 4: Coorleations between each feature*
 ![](Visualizations/general_trends.png)
@@ -137,7 +140,7 @@ After that, I struggled to summon my knowledge of HTML and CSS from my 6th grade
 
 This project can be applied in several ways.
 
-1. Helping decide when to buy a sneaker by predicting its price at any given time 📈
+1. Helping to decide when to buy a sneaker by predicting its price at any given time 📈
 2. Knowing which factors influence the sale price of each sneaker can help businesses optimize their shoe buying process to those that have the most potential 👍
 3. Sneaker businesses can see a timeline of when sneaker prices are high or low to know when to buy/sell 📆
 4. Know if your friend got ripped off for buying their shoes too early or too late! 🤣
