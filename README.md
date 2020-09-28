@@ -6,6 +6,9 @@ The purpose of this project is to predict the resale price of a sneaker based on
 ![GitHub issues](https://img.shields.io/github/issues-raw/lognorman20/stockx_competiton)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/lognorman20/stockx_competiton)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)
+
+
 
 ## Demo
 ![](visualizations/demo.gif)
@@ -60,7 +63,11 @@ The data I used is from [StockX's data competition in 2019](https://stockx.com/n
 
 To create this sample, we took a random, fixed percentage of StockX sales (X%) for each colorway, on each day, since September 2017. So, for each day the Off-White Jordan 1 was on the market, we randomly selected X% of its sale from each day. (It’s not important to know what X is; all that matters is that it’s a random sample, and that the same fixed X% of sales was selected from every day, for every sneaker). Every row in the spreadsheet represents an individual StockX sale. There are no averages or order counts; this is just a random sample of daily sales data."
 
-I did some exploratory data analysis and made some visuals:
+I did some exploratory data analysis and made some visuals. Check them out:
+
+EDA Notebook:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lognorman20/stockx_competiton/blob/master/notebooks/eda_1.ipynb)
 
 *Fig. 1: The Average Daily Sale Price from 2017 to 2019*
 ![](Visualizations/average_daily_sale_price.jpg)
@@ -94,6 +101,10 @@ I did some exploratory data analysis and made some visuals:
 
 ### Data Cleaning
 
+Data Cleaning Notebook:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lognorman20/stockx_competiton/blob/master/notebooks/initial_data_cleaning.ipynb)
+
 The data that StockX gave me was not very messy. Here's what I did:
 
 * Changed 'order date' dtype
@@ -107,6 +118,10 @@ The data that StockX gave me was not very messy. Here's what I did:
 
 
 ### Model Building 
+
+Model Building Notebook:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lognorman20/stockx_competiton/blob/master/notebooks/model_building.ipynb)
 
 To begin, I split the data into train and tests sets with a 80/20 split. 
 
