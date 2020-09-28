@@ -60,6 +60,8 @@ The data I used is from [StockX's data competition in 2019](https://stockx.com/n
 
 To create this sample, we took a random, fixed percentage of StockX sales (X%) for each colorway, on each day, since September 2017. So, for each day the Off-White Jordan 1 was on the market, we randomly selected X% of its sale from each day. (It’s not important to know what X is; all that matters is that it’s a random sample, and that the same fixed X% of sales was selected from every day, for every sneaker). Every row in the spreadsheet represents an individual StockX sale. There are no averages or order counts; this is just a random sample of daily sales data."
 
+I did some exploratory data analysis and made some visuals:
+
 *Fig. 1: The Average Daily Sale Price from 2017 to 2019*
 ![](Visualizations/average_daily_sale_price.jpg)
 
