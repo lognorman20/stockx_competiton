@@ -1,6 +1,6 @@
 # StockX Sneaker Price Prediction Project
 
-The purpose of this project is to predict the resale price of a sneaker based on several factors like the type of sneaker and buyer region.
+The purpose of this project is to predict the resale price of a sneaker based on several factors like the type of sneaker and buyer region. [Check out my article about it.](https://link.medium.com/x2YdLewBgab)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/lognorman20/stockx_competiton)
 ![GitHub issues](https://img.shields.io/github/issues-raw/lognorman20/stockx_competiton)
